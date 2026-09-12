@@ -71,10 +71,23 @@ img {
 }
 
 .brand {
-  display: grid;
-  gap: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--ink);
   text-decoration: none;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.brand-text {
+  display: grid;
+  gap: 0;
 }
 
 .brand strong {
@@ -174,6 +187,32 @@ h1 {
   margin-top: 28px;
 }
 
+.profile-links {
+  align-items: center;
+}
+
+.icon-link {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.icon-link:hover {
+  border-color: var(--teal);
+}
+
+.icon-link img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 .button,
 .pill-link {
   display: inline-flex;
@@ -248,6 +287,15 @@ h1 {
   font-size: 1.04rem;
 }
 
+.compact-head {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.pub-section-head {
+  margin-top: 46px;
+}
+
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -306,6 +354,35 @@ h1 {
 
 .publication {
   grid-template-columns: 84px 1fr;
+}
+
+.publication-link {
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: var(--paper);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.publication-link:hover,
+.publication-link:focus-visible {
+  border-color: rgba(23, 111, 115, 0.5);
+  box-shadow: 0 10px 24px rgba(32, 36, 40, 0.08);
+  transform: translateY(-1px);
+}
+
+.publication-link:focus-visible {
+  outline: 3px solid rgba(23, 111, 115, 0.22);
+  outline-offset: 3px;
+}
+
+.preprint {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: var(--wash);
 }
 
 .pub-title {
@@ -391,6 +468,25 @@ h1 {
   font-size: 0.9rem;
   text-align: center;
   padding: 16px;
+  overflow: hidden;
+}
+
+.person-photo {
+  aspect-ratio: 1;
+}
+
+.person-photo img,
+.image-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-slot:has(img),
+.person-photo:has(img) {
+  border-color: transparent;
+  padding: 0;
+  background: var(--wash);
 }
 
 .person-card {
@@ -404,6 +500,10 @@ h1 {
 
 .person-card h3 {
   margin-bottom: 4px;
+}
+
+.person-profile-links {
+  margin-top: 14px;
 }
 
 .filters {
@@ -521,6 +621,11 @@ h1 {
   .filters {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .profile-links {
+    align-items: center;
+    flex-direction: row;
   }
 
   .button,
