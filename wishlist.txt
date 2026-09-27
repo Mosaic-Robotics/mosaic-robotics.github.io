@@ -1,0 +1,7 @@
+wishlist
+-make it so the headers/footers only update in one file
+-udpate UG interest form
+-update the images to new ones
+-figure out lab images plan
+-icon on the tab in chrome
+-link IROS paper and IROS workshop posters
